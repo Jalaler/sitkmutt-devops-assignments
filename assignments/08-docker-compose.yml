@@ -1,6 +1,6 @@
 services:
   details:
-    build: ../../sitkmutt-bookinfo-details/
+    build: ../details/
     image: ghcr.io/jalaler/bookinfo-details:dev
     ports:
       - "8081:8081"
@@ -9,7 +9,7 @@ services:
       DO_NOT_ENCRYPT: "false"
 
   productpage:
-    build: ../../sitkmutt-bookinfo-productpage/
+    build: ../productpage/
     image: ghcr.io/jalaler/bookinfo-productpage:dev
     ports:
       - "8083:8083"
@@ -20,7 +20,7 @@ services:
       FLOOD_FACTOR: 0
 
   ratings:
-    build: ../../ratings/
+    build: ../ratings/
     image: ghcr.io/jalaler/bookinfo-ratings:dev
     ports:
       - "8080:8080"
@@ -41,7 +41,7 @@ services:
       MONGODB_DATABASE: ratings
 
   reviews:
-    build: ../../sitkmutt-bookinfo-reviews/
+    build: ../reviews/
     image: ghcr.io/jalaler/bookinfo-reviews:dev
     ports:
       - "8082:8082"
