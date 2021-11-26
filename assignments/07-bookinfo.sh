@@ -1,12 +1,10 @@
 docker build ../ratings/ -t ratings
 
-docker build ../sitkmutt-bookinfo-details/ -t details
+docker build ../details/ -t details
 
-docker build ../sitkmutt-bookinfo-reviews/ -t reviews
+docker build ../reviews/ -t reviews
 
-docker build ../sitkmutt-bookinfo-productpage/ -t productpage
-
-
+docker build ../productpage/ -t productpage
 
 docker run -d --name mongodb -p 27017:27017 \
   -v $(pwd)/databases:/docker-entrypoint-initdb.d bitnami/mongodb:5.0.2-debian-10-r2
